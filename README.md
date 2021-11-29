@@ -19,6 +19,7 @@ Learning content for the Certified Kubernetes Administrator - CKA (2021/2022)
 * https://itnext.io/kubernetes-for-dummies-life-of-a-pod-fc8158e27aa
 * https://medium.com/scorelab/statefulset-in-k8s-24a0b3a30ec9
 * https://kubernetes.io/docs/
+* https://kodekloud.com/courses/game-of-pods/
 * https://blog.aeciopires.com/primeiros-passos-com-docker
 * https://github.com/badtuxx/DescomplicandoKubernetes
 * https://medium.com/dzerolabs/just-in-time-kubernetes-a-beginners-guide-to-kubernetes-core-concepts-19ee7acbafa1
