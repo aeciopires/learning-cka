@@ -57,6 +57,7 @@ Learning content for the Certified Kubernetes Administrator - CKA (2021/2022)
 * https://www.mirantis.com/blog/introduction-to-yaml-creating-a-kubernetes-deployment/
 * https://learnk8s.io/troubleshooting-deployments
 * https://ronaknathani.com/blog/2020/08/how-a-kubernetes-pod-gets-an-ip-address/
+* https://github.com/badtuxx/BondeDoCKA
 * https://github.com/dgkanatsios/CKAD-exercises
 * https://github.com/roxcarpio/cka-exercises
 * https://github.com/stretchcloud/cka-lab-practice
