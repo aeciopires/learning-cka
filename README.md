@@ -14,6 +14,7 @@ Learning content for the Certified Kubernetes Administrator - CKA (2021/2022)
 
 # Learning Kubernetes
 
+* https://kubebyexample.com/
 * https://medium.com/@mfsilv/kubernetes-a-gentle-introduction-9d23de7f00e0
 * https://itnext.io/kubernetes-for-dummies-life-of-a-pod-fc8158e27aa
 * https://itnext.io/kubernetes-for-dummies-life-of-a-pod-fc8158e27aa
