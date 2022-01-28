@@ -51,6 +51,8 @@ Learning content for the Certified Kubernetes Administrator - CKA (2021/2022)
 
 # Exercises and tips about CKA
 
+* https://docs.linuxfoundation.org/tc-docs/certification/lf-candidate-handbook/exam-preparation-checklist
+* https://faun.pub/be-fast-with-kubectl-1-18-ckad-cka-31be00acc443
 * https://training.linuxfoundation.org/certification/certified-kubernetes-administrator-cka/
 * https://docs.linuxfoundation.org/tc-docs/certification/lf-candidate-handbook
 * https://docs.linuxfoundation.org/tc-docs/certification/tips-cka-and-ckad
@@ -70,7 +72,6 @@ Learning content for the Certified Kubernetes Administrator - CKA (2021/2022)
 * https://kodekloud.com/
 * https://k8s-examples.container-solutions.com/
 * https://rob-mengert.medium.com/my-cka-experience-29e350c3f283
-* https://faun.pub/be-fast-with-kubectl-1-18-ckad-cka-31be00acc443
 * https://dev.to/liptanbiswas/ckad-practice-questions-4mpn
 * https://github.com/twajr/ckad-prep-notes?utm_sq=gi8psj8vrn
 * https://ummiyah-nasim.medium.com/certified-kubernetes-administrator-cka-tips-and-preparation-strategy-6c6aceae1f42
