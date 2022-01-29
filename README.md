@@ -9,6 +9,7 @@
 - [Exercises and tips about CKA](#exercises-and-tips-about-cka)
 - [Tools](#tools)
 - [License](#license)
+- [Contributors](#contributors)
 
 <!-- TOC -->
 
@@ -117,3 +118,9 @@ Create cluster with informations in this [page](create-cluster.md).
 # License
 
 GNUv3 - General Public License version 3
+
+# Contributors
+
+* [Lucas Santos](https://www.linkedin.com/in/lucas-vieira-dos-santos)
+* [Danilo Rocha](https://www.linkedin.com/in/danilo-figueiredo-rocha)
+* [Isaac Mecchi](https://www.linkedin.com/in/isaacmecchi)
