@@ -1,17 +1,13 @@
 <!-- TOC -->
 
 - [Create Cluster](#create-cluster)
-- [List jobs running in background](#list-jobs-running-in-background)
-- [Finish jobs running in background](#finish-jobs-running-in-background)
 
 <!-- TOC -->
 
 
 # Create Cluster
 
-> ATTENTION!!! Tested commands on Ubuntu 20.04 in 2022.
-
-* Install and use [tmux](https://www.hostinger.com.br/tutoriais/como-usar-tmux-lista-de-comandos).
+> ATTENTION!!! Tested commands on Ubuntu 20.04 and 18.04 in 2022.
 
 * Install [VirtualBox](https://www.virtualbox.org/wiki/Linux_Downloads).
 
@@ -70,16 +66,16 @@ vagrant destroy
 ```bash
 #------- Specifics (master)
 kubeadm config images pull
-sudo kubeadm init
-# Reset
-# kubeadm reset
-# rm -rf /etc/cni/net.d
+sudo kubeadm init --apiserver-advertise-address 192.168.56.10 --kubernetes-version 1.22.6
+# Reset configuration
+# sudo kubeadm reset
+# sudo rm -rf /etc/cni/net.d
+# sudo rm $HOME/.kube/config
 
 # Config kubectl
 mkdir -p $HOME/.kube
 sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
 sudo chown $(id -u):$(id -g) $HOME/.kube/config
-kubectl get nodes
 
 # Config pod network (weave-net)
 sudo modprobe br_netfilter ip_vs_rr ip_vs_wrr ip_vs_sh nf_conntrack_ipv4 ip_vs
@@ -94,12 +90,11 @@ kubectl get nodes
 kubeadm token create --print-join-command
 #
 # Example of command to run in worker node:
-# kubeadm join 10.0.35.25:6443 --token xzlzjw.bksen5z6somtgh22 --discovery-token-ca-cert-hash sha256:86e507a7af3de3b47aceff4c9a2466e965e72ff7236a37031ea76258425b5c72
-```
+# sudo kubeadm join 192.168.56.10:6443 --token x3eo52.2d7gsi6kait5q3tr --discovery-token-ca-cert-hash sha256:24af0d70399747b37b2684886fc8fe3f8585ecfbfae83872249872d5ea36261f
 
 # List jobs running in background
-jobs -l
+#jobs -l
 
 # Finish jobs running in background
-kill %1 %2 %3 %4 %5
+#kill %1 %2 %3 %4 %5
 ```

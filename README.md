@@ -3,6 +3,7 @@
 <!-- TOC -->
 
 - [learning-cka](#learning-cka)
+- [Tmux](#tmux)
 - [Create Cluster](#create-cluster)
 - [Learning Kubernetes](#learning-kubernetes)
 - [Exercises and tips about CKA](#exercises-and-tips-about-cka)
@@ -13,6 +14,9 @@
 
 Learning content for the Certified Kubernetes Administrator - CKA (2022)
 
+# Tmux
+
+Install and use [tmux](tmux.md).
 # Create Cluster
 
 Create cluster with informations in this [page](create-cluster.md).

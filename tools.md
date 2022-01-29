@@ -1,23 +1,29 @@
 <!-- TOC -->
 
-- [Requirements](#requirements)
-  - [General Packages](#general-packages)
+- [General Packages](#general-packages)
 - [Docker](#docker)
 - [Kubeadm, Kubelet and Kubectl](#kubeadm-kubelet-and-kubectl)
 - [Aliases](#aliases)
 
 <!-- TOC -->
 
-# Requirements
-
-## General Packages
-
-Install the follow packages.
+# General Packages
 
 Ubuntu:
 
+Disable local firewall and update packages.
+
 ```bash
+sudo systemctl stop ufw
+sudo systemctl disable ufw
+
 sudo apt update
+sudo apt upgrade -y
+```
+
+Install the follow packages.
+
+```bash
 sudo apt install -y apt-transport-https ca-certificates vim traceroute telnet tcpdump elinks curl wget openssl netcat net-tools jq
 ```
 
@@ -32,6 +38,8 @@ cd /home/vagrant
 
 sudo curl -fsSL https://get.docker.com | bash
 
+sudo su
+
 cat > /etc/docker/daemon.json <<EOF
 {
   "exec-opts": ["native.cgroupdriver=systemd"],
@@ -42,6 +50,8 @@ cat > /etc/docker/daemon.json <<EOF
   "storage-driver": "overlay2"
 }
 EOF
+
+exit
 
 sudo mkdir -p /etc/systemd/system/docker.service.d
 sudo systemctl daemon-reload
