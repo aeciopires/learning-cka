@@ -3,6 +3,7 @@
 <!-- TOC -->
 
 - [learning-cka](#learning-cka)
+- [Create Cluster](#create-cluster)
 - [Learning Kubernetes](#learning-kubernetes)
 - [Exercises and tips about CKA](#exercises-and-tips-about-cka)
 - [Tools](#tools)
@@ -10,10 +11,15 @@
 
 <!-- TOC -->
 
-Learning content for the Certified Kubernetes Administrator - CKA (2021/2022)
+Learning content for the Certified Kubernetes Administrator - CKA (2022)
+
+# Create Cluster
+
+Create cluster with informations in this [page](create-cluster.md).
 
 # Learning Kubernetes
 
+* https://learnk8s.io/kubernetes-network-packets
 * https://kubebyexample.com/
 * https://medium.com/@mfsilv/kubernetes-a-gentle-introduction-9d23de7f00e0
 * https://itnext.io/kubernetes-for-dummies-life-of-a-pod-fc8158e27aa
