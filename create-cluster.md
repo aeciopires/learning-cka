@@ -92,6 +92,15 @@ kubeadm token create --print-join-command
 # Example of command to run in worker node:
 # sudo kubeadm join 192.168.56.10:6443 --token x3eo52.2d7gsi6kait5q3tr --discovery-token-ca-cert-hash sha256:24af0d70399747b37b2684886fc8fe3f8585ecfbfae83872249872d5ea36261f
 
+# Fix problem in worker1 and worker2 with wave
+# References:
+# http://www.bennythejudge.com/kubernetes/cni/weaver/2020/05/02/weave-pod-crashes-on-worker-digitalocean.html
+# https://stackoverflow.com/questions/54550285/readiness-probe-failed-error-in-weave-kubernetes
+kubectl get svc kube-dns -n kube-system
+# Change 10.96.0.1/32 to the network address in the output of the previous command
+sudo iptables -t nat -I KUBE-SERVICES -d 10.96.0.1/32 -p tcp -m comment --comment "default/kubernetes:https cluster IP" -m tcp --dport 443 -j KUBE-MARK-MASQ
+
+
 # List jobs running in background
 #jobs -l
 
