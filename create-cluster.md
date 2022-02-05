@@ -56,7 +56,7 @@ Run steps of section [GENERIC_STEPS - Create Cluster with Vagrant](#generic_step
 cd learning-cka/vagrant/libvirt
 ```
 
-* Run the follow commands to [install](https://github.com/vagrant-libvirt/vagrant-libvirt#installation) the plugins:
+* Run the follow commands to [install](https://github.com/vagrant-libvirt/vagrant-libvirt#installation) the plugin:
 
 ```bash
 vagrant plugin install vagrant-libvirt
