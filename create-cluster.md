@@ -2,6 +2,7 @@
 
 - [Install Vagrant](#install-vagrant)
 - [Using Vagrant with VirtualBox](#using-vagrant-with-virtualbox)
+- [Using Vagrant with Libvirt/QEMU KVM](#using-vagrant-with-libvirt)
 - [GENERIC_STEPS - Create Cluster with Vagrant](#generic_steps---create-cluster-with-vagrant)
 
 <!-- TOC -->
@@ -36,6 +37,29 @@ cd learning-cka/vagrant/virtualbox
 ```bash
 vagrant plugin install vagrant-vbguest
 vagrant plugin install vagrant-disksize
+```
+
+Run steps of section [GENERIC_STEPS - Create Cluster with Vagrant](#generic_steps---create-cluster-with-vagrant).
+
+
+# Using Vagrant with Libvirt/QEMU KVM
+
+> ATTENTION!!! The steps in this section should only be performed if you want to use vagrant with Libvirt/QEMU KVM.
+> ATTENTION!!! Tested commands on Ubuntu 21.04 in 2022.
+
+* Install [Virt-Manager/Livbirt](https://ubuntu.com/server/docs/virtualization-virt-tools). A GUI for libvirt.
+* Install [QEMU KVM] (https://help.ubuntu.com/community/KVM/Installation). The hypervisor.
+
+* Access directory of ``Vagrantfile``:
+
+```bash
+cd learning-cka/vagrant/libvirt
+```
+
+* Run the follow commands to [install](https://github.com/vagrant-libvirt/vagrant-libvirt#installation) the plugins:
+
+```bash
+vagrant plugin install vagrant-libvirt
 ```
 
 Run steps of section [GENERIC_STEPS - Create Cluster with Vagrant](#generic_steps---create-cluster-with-vagrant).
