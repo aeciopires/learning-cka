@@ -1,0 +1,119 @@
+# Informations
+# authors: "Aécio Pires, Isaac Mecchi"
+# mail: https://blog.aeciopires.com/contato
+# mail: isaacmecchi at gmail dot com
+#
+# Run the follow commands to install the plugins
+# vagrant plugin install vagrant-libvirt
+#
+# Start VMs with commands
+# vagrant up --provision --provider=libvirt
+#
+# Access each VM with SSH
+# vagrant ssh master
+# vagrant ssh worker1
+# vagrant ssh worker2
+#
+# Stop VMs
+# vagrant halt
+#
+# Destroy VMs
+# vagrant destroy
+#
+
+# Verifing Vagrant dependences
+required_plugins = %w( vagrant-libvirt )
+required_plugins.each do |plugin|
+  system "vagrant plugin install #{plugin}" unless Vagrant.has_plugin? plugin
+  raise "The plugin #{plugin} is required. Please run `vagrant plugin install #{plugin}`"  unless Vagrant.has_plugin? plugin
+end
+
+#------------------------------------------------#
+# Variables
+#------------------------------------------------#
+Vagrant.require_version ">= 2.2.19"
+VAGRANTFILE_API_VERSION = "2"
+TIMEOUT = 600
+
+# Box name: https://app.vagrantup.com/boxes/search
+BOXNAME     = "generic/ubuntu1804"
+BOX_VERSION = "3.6.8"
+
+# Network address of VMs
+NET_ADDRESS = "192.168.56"
+
+# Disk size of each VM. Qcow2 disk, pay as you go. Initial size 1.4G
+DISKSIZE = "128GB"
+
+# Source directory of your host
+# The contents will be synced after executing one of the following commands
+# --> vagrant up
+# --> vagrant reload
+# Libvirt default to NFS
+DIR_SOURCE = "data/"
+
+# Destiny directory into each VM
+DIR_DESTINY = "/vagrant"
+
+# Set locale each VM
+ENV["LC_ALL"] = "en_US.UTF-8"
+#------------------------------------------------#
+
+
+#*******************************#
+# Start configurations of VMs
+#*******************************#
+
+Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
+
+  #---------------------------------------
+  # Creating master
+  config.vm.define :master, primary: true do |master_config|
+    master_config.vm.provider "libvirt" do |libvirt|
+      libvirt.memory = '3072'
+      libvirt.cpus   = '2'
+    end
+
+    master_config.vm.hostname         = 'master.domain.com.br'
+    master_config.vm.box              = BOXNAME
+    master_config.vm.boot_timeout     = TIMEOUT
+    master_config.vm.box_check_update = true
+    master_config.vm.box_version      = BOX_VERSION
+    master_config.vm.network "private_network", ip: "#{NET_ADDRESS}.10"
+    master_config.vm.synced_folder DIR_SOURCE, DIR_DESTINY
+  end
+
+  #---------------------------------------
+  # Creating worker1
+  config.vm.define :worker1, primary: true do |worker1_config|
+    worker1_config.vm.provider "libvirt" do |libvirt|
+      libvirt.memory = '2048'
+      libvirt.cpus   = '2'
+    end
+
+    worker1_config.vm.hostname         = 'worker1.domain.com.br'
+    worker1_config.vm.box              = BOXNAME
+    worker1_config.vm.boot_timeout     = TIMEOUT
+    worker1_config.vm.box_check_update = true
+    worker1_config.vm.box_version      = BOX_VERSION
+    worker1_config.vm.network "private_network", ip: "#{NET_ADDRESS}.11"
+    worker1_config.vm.synced_folder DIR_SOURCE, DIR_DESTINY
+  end
+
+  #---------------------------------------
+  # Creating worker2
+  config.vm.define :worker2, primary: true do |worker2_config|
+    worker2_config.vm.provider "libvirt" do |libvirt|
+      libvirt.memory = '2048'
+      libvirt.cpus   = '2'
+    end
+
+    worker2_config.vm.hostname         = 'worker2.domain.com.br'
+    worker2_config.vm.box              = BOXNAME
+    worker2_config.vm.boot_timeout     = TIMEOUT
+    worker2_config.vm.box_check_update = true
+    worker2_config.vm.box_version      = BOX_VERSION
+    worker2_config.vm.network "private_network", ip: "#{NET_ADDRESS}.12"
+    worker2_config.vm.synced_folder DIR_SOURCE, DIR_DESTINY
+  end
+end
