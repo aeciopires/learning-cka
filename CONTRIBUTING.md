@@ -1,3 +1,10 @@
+<!-- TOC -->
+
+- [Contributing](#contributing)
+- [About Visual Code (VSCode)](#about-visual-code-vscode)
+
+<!-- TOC -->
+
 # Contributing
 
 * Install the follow packages: ``git``.
@@ -73,3 +80,26 @@ git push origin main
 
 Reference:
 * https://blog.scottlowe.org/2015/01/27/using-fork-branch-git-workflow/
+
+# About Visual Code (VSCode)
+
+Use a IDE (Integrated Development Environment) or text editor of your choice. By default, the use of VSCode is recommended.
+
+VSCode (https://code.visualstudio.com), combined with the following plugins, helps the editing/review process, mainly allowing the preview of the content before the commit, analyzing the Markdown syntax and generating the automatic summary, as the section titles are created/changed.
+
+Plugins to Visual Code:
+
+* Helm Intellisense: https://marketplace.visualstudio.com/items?itemName=Tim-Koehler.helm-intellisense
+* gitlens: https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens (require git package)
+* Markdown-all-in-one: https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one
+* Markdown-lint: https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint
+* Markdown-toc: https://marketplace.visualstudio.com/items?itemName=AlanWalk.markdown-toc
+* shellcheck: https://marketplace.visualstudio.com/items?itemName=timonwong.shellcheck (require shellcheck package)
+* YAML: https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml
+* Vagrant: https://marketplace.visualstudio.com/items?itemName=bbenoist.vagrant
+
+Theme for VSCode:
+
+* https://code.visualstudio.com/docs/getstarted/themes
+* https://dev.to/thegeoffstevens/50-vs-code-themes-for-2020-45cc
+* https://vscodethemes.com/

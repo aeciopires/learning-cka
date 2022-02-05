@@ -55,6 +55,7 @@ Create cluster with informations in this [page](create-cluster.md).
 * https://edgehog.blog/getting-started-with-k8s-core-concepts-135fb570462e
 * https://itnext.io/working-with-kubernetes-configmaps-part-2-watchers-b6dd0e583d71
 * https://github.com/kelseyhightower/kubernetes-the-hard-way
+* https://github.com/mmumshad/kubernetes-the-hard-way
 * https://dev.to/kodekloud/learn-kubernetes-by-playing-the-game-of-pods-43g4
 * https://www.freecodecamp.org/news/the-kubernetes-handbook/amp/?__twitter_impression=true
 * https://docs.google.com/presentation/d/1zrfVlE5r61ZNQrmXKx5gJmBcXnoa_WerHEnTxu5SMco/
