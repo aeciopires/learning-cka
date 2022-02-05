@@ -42,7 +42,7 @@ BOX_VERSION = "3.6.8"
 # Network address of VMs
 NET_ADDRESS = "192.168.56"
 
-# Disk size of each VM. Pay as you go. Initial size 1.4G
+# Disk size of each VM. Qcow2 disk, pay as you go. Initial size 1.4G
 DISKSIZE = "128GB"
 
 # Source directory of your host
