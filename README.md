@@ -18,6 +18,7 @@ Learning content for the Certified Kubernetes Administrator - CKA (2022)
 # Tmux
 
 Install and use [tmux](tmux.md).
+
 # Create Cluster
 
 Create cluster with informations in this [page](create-cluster.md).
@@ -93,7 +94,6 @@ Create cluster with informations in this [page](create-cluster.md).
 * https://www.linkedin.com/pulse/kubernetes-certification-cka-ckad-exam-tips-gineesh-madapparambath/?articleId=6662722107232911361
 * https://aninditabasak.medium.com/certified-kubernetes-administrator-exam-cka-exam-preparation-cheatsheet-261d309a8013
 * https://medium.com/@reachcloudsme/cracking-ckad-cka-cks-exams-my-way-4081f527e0a3
-
 
 # Tools
 

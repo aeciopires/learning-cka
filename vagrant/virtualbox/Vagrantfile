@@ -7,7 +7,6 @@
 # vagrant plugin install vagrant-vbguest
 #
 # Start VMs with commands
-# vagrant init
 # vagrant up --provision
 #
 # Access each VM with SSH

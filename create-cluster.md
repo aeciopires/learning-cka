@@ -1,15 +1,15 @@
 <!-- TOC -->
 
-- [Create Cluster](#create-cluster)
+- [Install Vagrant](#install-vagrant)
+- [Using Vagrant with VirtualBox](#using-vagrant-with-virtualbox)
+- [GENERIC_STEPS - Create Cluster with Vagrant](#generic_steps---create-cluster-with-vagrant)
 
 <!-- TOC -->
 
 
-# Create Cluster
+# Install Vagrant
 
 > ATTENTION!!! Tested commands on Ubuntu 20.04 and 18.04 in 2022.
-
-* Install [VirtualBox](https://www.virtualbox.org/wiki/Linux_Downloads).
 
 * Install [Vagrant](https://www.vagrantup.com/downloads).
 
@@ -19,6 +19,18 @@ sudo apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(l
 sudo apt-get update && sudo apt-get install vagrant
 ```
 
+# Using Vagrant with VirtualBox
+
+> ATTENTION!!! The steps in this section should only be performed if you want to use vagrant with VirtualBox.
+
+* Install [VirtualBox](https://www.virtualbox.org/wiki/Linux_Downloads).
+
+* Access directory of ``Vagrantfile``:
+
+```bash
+cd learning-cka/vagrant/virtualbox
+```
+
 * Run the follow commands to install the plugins:
 
 ```bash
@@ -26,16 +38,13 @@ vagrant plugin install vagrant-vbguest
 vagrant plugin install vagrant-disksize
 ```
 
-* Access directory of ``Vagrantfile``:
+Run steps of section [GENERIC_STEPS - Create Cluster with Vagrant](#generic_steps---create-cluster-with-vagrant).
 
-```bash
-cd learning-cka/vagrant
-```
+# GENERIC_STEPS - Create Cluster with Vagrant
 
 * Start virtual machines (VMs) with commands:
 
 ```bash
-vagrant init
 vagrant up --provision
 ```
 
