@@ -60,6 +60,12 @@ Create cluster with informations in this [page](create-cluster.md).
 * https://docs.google.com/presentation/d/1zrfVlE5r61ZNQrmXKx5gJmBcXnoa_WerHEnTxu5SMco/
 * https://slides.kubernetesmastery.com/#1
 * https://www.mirantis.com/cloud-native-concepts/getting-started-with-kubernetes/what-is-kubernetes/
+* https://aditya-sunjava.medium.com/externalizing-configurations-in-kubernetes-using-configmap-and-secret-bfda0970d8ae?s=08
+* https://technos.medium.com/how-kubectl-apply-command-works-d092121056d3?s=08
+* https://medium.com/box-tech-blog/ease-kubernetes-troubleshooting-introducing-kubectl-nurse-a3c1211633ba
+* https://medium.com/@kritika.singhal/managing-kubernetes-context-using-kubectl-fe78a9cdc506?s=08
+* https://fransemalila.medium.com/kubernetes-networking-cea2e1b7d2b3?s=08
+* https://medium.com/k8slens/kubernetes-for-everyone-785959e2c6d7
 
 # Exercises and tips about CKA
 
@@ -94,6 +100,7 @@ Create cluster with informations in this [page](create-cluster.md).
 * https://www.linkedin.com/pulse/kubernetes-certification-cka-ckad-exam-tips-gineesh-madapparambath/?articleId=6662722107232911361
 * https://aninditabasak.medium.com/certified-kubernetes-administrator-exam-cka-exam-preparation-cheatsheet-261d309a8013
 * https://medium.com/@reachcloudsme/cracking-ckad-cka-cks-exams-my-way-4081f527e0a3
+* https://faun.pub/how-i-cracked-certified-kubernetes-administrator-exam-in-7-days-f77f6f0ba4c5
 
 # Tools
 
