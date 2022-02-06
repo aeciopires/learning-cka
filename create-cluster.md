@@ -155,6 +155,41 @@ sudo iptables -t nat -I KUBE-SERVICES -d 10.96.0.1/32 -p tcp -m comment --commen
 sudo apt install iptables-persistent
 # Reference: https://linuxconfig.org/how-to-make-iptables-rules-persistent-after-reboot-on-linux
 
+
+# Permanently enable modules of Kernel for pod network (weave-net)
+cat << EOF | sudo tee -a /etc/modules-load.d/modules.conf
+br_netfilter
+ip_vs
+ip_vs_rr
+ip_vs_wrr
+ip_vs_sh
+nf_conntrack_ipv4 
+EOF
+
+# Fix problem with nodes after reboot VMs
+# Permanently configure kubelet in each VM
+# Reference: https://stackoverflow.com/questions/51154911/kubectl-exec-results-in-error-unable-to-upgrade-connection-pod-does-not-exi
+# Only master
+cat << EOF | sudo tee /etc/default/kubelet
+KUBELET_EXTRA_ARGS="--node-ip=192.168.56.10"
+EOF
+sudo systemctl daemon-reload
+sudo systemctl restart kubelet
+
+# Only worker1
+cat << EOF | sudo tee /etc/default/kubelet
+KUBELET_EXTRA_ARGS="--node-ip=192.168.56.10"
+EOF
+sudo systemctl daemon-reload
+sudo systemctl restart kubelet
+
+# Only worker2
+cat << EOF | sudo tee /etc/default/kubelet
+KUBELET_EXTRA_ARGS="--node-ip=192.168.56.12"
+EOF
+sudo systemctl daemon-reload
+sudo systemctl restart kubelet
+
 # List jobs running in background
 #jobs -l
 
