@@ -2,7 +2,7 @@
 
 - [Install Vagrant](#install-vagrant)
 - [Using Vagrant with VirtualBox](#using-vagrant-with-virtualbox)
-- [Using Vagrant with Libvirt/QEMU KVM](#using-vagrant-with-libvirt)
+- [Using Vagrant with Libvirt/QEMU KVM](#using-vagrant-with-libvirtqemu-kvm)
 - [GENERIC_STEPS - Create Cluster with Vagrant](#generic_steps---create-cluster-with-vagrant)
 
 <!-- TOC -->
@@ -110,8 +110,24 @@ mkdir -p $HOME/.kube
 sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
 sudo chown $(id -u):$(id -g) $HOME/.kube/config
 
-# Config pod network (weave-net)
-sudo modprobe br_netfilter ip_vs_rr ip_vs_wrr ip_vs_sh nf_conntrack_ipv4 ip_vs
+# Enable modules of Kernel for pod network (weave-net)
+sudo modprobe br_netfilter ip_vs ip_vs_rr ip_vs_wrr ip_vs_sh nf_conntrack_ipv4
+# Troubleshooting
+# https://github.com/kubernetes/kubeadm/issues/975#issuecomment-403081740
+
+# Permanently enable modules of Kernel for pod network (weave-net)
+cat << EOF | sudo tee -a /etc/modules-load.d/modules.conf
+br_netfilter
+ip_vs
+ip_vs_rr
+ip_vs_wrr
+ip_vs_sh
+nf_conntrack_ipv4 
+EOF
+
+cat /etc/modules-load.d/modules.conf
+
+# Install weave-net
 kubectl apply -f "https://cloud.weave.works/k8s/net?k8s-version=$(kubectl version | base64 | tr -d '\n')"
 kubectl get pods -A
 kubectl get nodes
@@ -133,6 +149,11 @@ kubectl get svc kube-dns -n kube-system
 # Change 10.96.0.1/32 to the network address in the output of the previous command
 sudo iptables -t nat -I KUBE-SERVICES -d 10.96.0.1/32 -p tcp -m comment --comment "default/kubernetes:https cluster IP" -m tcp --dport 443 -j KUBE-MARK-MASQ
 
+
+#------- Generic (master, worker1 and worker2)
+# Save iptables rules
+sudo apt install iptables-persistent
+# Reference: https://linuxconfig.org/how-to-make-iptables-rules-persistent-after-reboot-on-linux
 
 # List jobs running in background
 #jobs -l

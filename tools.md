@@ -38,9 +38,7 @@ cd /home/vagrant
 
 sudo curl -fsSL https://get.docker.com | bash
 
-sudo su
-
-cat > /etc/docker/daemon.json <<EOF
+cat << EOF | sudo tee /etc/docker/daemon.json
 {
   "exec-opts": ["native.cgroupdriver=systemd"],
   "log-driver": "json-file",
@@ -50,8 +48,6 @@ cat > /etc/docker/daemon.json <<EOF
   "storage-driver": "overlay2"
 }
 EOF
-
-exit
 
 sudo mkdir -p /etc/systemd/system/docker.service.d
 sudo systemctl daemon-reload
@@ -84,8 +80,13 @@ References:
 * Install Kubernetes with kubeadm:
 
 ```bash
+# Disable all swaps from /proc/swaps
 sudo swapoff -a
 
+# Permanently disable swap space in Linux
+# Follow the instructions of the page: https://www.tecmint.com/disable-swap-partition-in-centos-ubuntu/
+
+# Add GPG and kubeadm repository
 sudo curl -fsSLo /usr/share/keyrings/kubernetes-archive-keyring.gpg https://packages.cloud.google.com/apt/doc/apt-key.gpg
 
 echo "deb [signed-by=/usr/share/keyrings/kubernetes-archive-keyring.gpg] https://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee /etc/apt/sources.list.d/k8s.list
