@@ -122,6 +122,7 @@ Create cluster with informations in this [page](create-cluster.md).
 * https://octant.dev/
 * https://infra.app/
 * https://k9scli.io/
+* https://github.com/up9inc/mizu
 
 # License
 
