@@ -178,7 +178,7 @@ sudo systemctl restart kubelet
 
 # Only worker1
 cat << EOF | sudo tee /etc/default/kubelet
-KUBELET_EXTRA_ARGS="--node-ip=192.168.56.10"
+KUBELET_EXTRA_ARGS="--node-ip=192.168.56.11"
 EOF
 sudo systemctl daemon-reload
 sudo systemctl restart kubelet
