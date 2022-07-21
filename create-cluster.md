@@ -167,6 +167,7 @@ sudo iptables -t nat -I KUBE-SERVICES -d 10.96.0.1/32 -p tcp -m comment --commen
 #------- Generic (master, worker1 and worker2)
 # Save iptables rules
 sudo apt install iptables-persistent
+sudo iptables-save
 # Reference: https://linuxconfig.org/how-to-make-iptables-rules-persistent-after-reboot-on-linux
 
 
