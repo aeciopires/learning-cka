@@ -70,6 +70,7 @@ Create cluster with informations in this [page](create-cluster.md).
 * https://github.com/k8s-at-home/awesome-home-kubernetes
 * https://github.com/ahmetb/kubectl-aliases
 * https://aws.plainenglish.io/kubernetes-deep-dive-cri-container-runtime-interface-f1d005d5a458
+* https://kubernetes.io/docs/reference/kubectl/cheatsheet/
 
 # Exercises and tips about CKA
 
@@ -111,6 +112,11 @@ Create cluster with informations in this [page](create-cluster.md).
 * https://itnext.io/cks-cka-ckad-changed-terminal-to-remote-desktop-157a26c1d5e
 * https://itnext.io/practical-tips-for-passing-ckad-exam-6cbdf2d35cb1
 * https://www.slideshare.net/AdnanRashid2/cka-certified-kubernetes-administrator-notes
+* https://kubernetes.io/docs/tasks/debug/debug-cluster/
+* https://kubernetes.io/docs/concepts/scheduling-eviction/kube-scheduler/
+* https://killercoda.com/killer-shell-cka
+* https://killercoda.com/killer-shell-ckad
+* https://github.com/dgkanatsios/CKAD-exercises/blob/main/a.core_concepts.md
 
 
 # Tools
