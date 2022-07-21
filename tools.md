@@ -4,6 +4,7 @@
 - [Docker](#docker)
 - [Kubeadm, Kubelet and Kubectl](#kubeadm-kubelet-and-kubectl)
 - [Aliases](#aliases)
+- [Vim](#vim)
 
 <!-- TOC -->
 
@@ -24,7 +25,7 @@ sudo apt upgrade -y
 Install the follow packages.
 
 ```bash
-sudo apt install -y apt-transport-https ca-certificates vim traceroute telnet tcpdump elinks curl wget openssl netcat net-tools jq
+sudo apt install -y apt-transport-https acl ca-certificates vim traceroute telnet tcpdump elinks curl wget openssl netcat net-tools jq
 ```
 
 # Docker
@@ -51,17 +52,18 @@ EOF
 
 sudo mkdir -p /etc/systemd/system/docker.service.d
 sudo systemctl daemon-reload
-sudo systemctl restart docker
+sudo systemctl restart docker containerd
 
 # Start the Docker service
-sudo systemctl start docker
+sudo systemctl start docker containerd
 
 # Configure Docker to boot up with the OS
-sudo systemctl enable docker
+sudo systemctl enable docker containerd
 
 # Add your user to the Docker group
 sudo usermod -aG docker $USER
 sudo setfacl -m user:$USER:rw /var/run/docker.sock
+sudo setfacl -m user:$USER:rw /var/run/containerd/containerd.sock
 
 # Check whether the Cgroup driver has been set correctly
 # If the output was Cgroup Driver: systemd, all right!
@@ -89,16 +91,14 @@ sudo swapoff -a
 # Add GPG and kubeadm repository
 sudo curl -fsSLo /usr/share/keyrings/kubernetes-archive-keyring.gpg https://packages.cloud.google.com/apt/doc/apt-key.gpg
 
-echo "deb [signed-by=/usr/share/keyrings/kubernetes-archive-keyring.gpg] https://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee /etc/apt/sources.list.d/k8s.list
-
-cat /etc/apt/sources.list.d/k8s.list
+echo "deb [signed-by=/usr/share/keyrings/kubernetes-archive-keyring.gpg] https://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee /etc/apt/sources.list.d/kubernetes.list
 
 sudo apt update
 
 # Command to get version of packages
-#sudo apt-cache show kubeadm kubectl kubelet | grep 1.22 | more
+sudo apt-cache show kubeadm kubectl kubelet | grep 1.24 | more
 
-sudo apt install -y kubelet=1.22.6-00 kubeadm=1.22.6-00 kubectl=1.22.6-00
+sudo apt install -y kubelet=1.24.3-00 kubeadm=1.24.3-00 kubectl=1.24.3-00
 
 # List versions
 kubeadm version
@@ -139,4 +139,13 @@ alias ls='ls --color=auto'
 ```bash
 source ~/.bashrc
 source /root/.bashrc
+```
+
+# Vim
+
+Configure ``vim`` command in the ``$HOME/.vimrc`` file.
+
+```bash
+set paste
+set number
 ```

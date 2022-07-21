@@ -10,14 +10,14 @@
 
 # Install Vagrant
 
-> ATTENTION!!! Tested commands on Ubuntu 20.04 and 18.04 in 2022.
+> ATTENTION!!! Tested commands on Ubuntu 20.04 in 2022.
 
 * Install [Vagrant](https://www.vagrantup.com/downloads).
 
 ```bash
-curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
-sudo apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
-sudo apt-get update && sudo apt-get install vagrant
+wget -O- https://apt.releases.hashicorp.com/gpg | gpg --dearmor | sudo tee /usr/share/keyrings/hashicorp-archive-keyring.gpg
+echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://apt.releases.hashicorp.com $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/hashicorp.list
+sudo apt update && sudo apt install vagrant
 ```
 
 # Using Vagrant with VirtualBox
@@ -98,8 +98,15 @@ vagrant destroy
 
 ```bash
 #------- Specifics (master)
+# Fix bug between containerd and kubeadm
+# source: https://github.com/containerd/containerd/issues/4581
+
+sudo rm /etc/containerd/config.toml
+sudo systemctl restart containerd
+sudo setfacl -m user:$USER:rw /var/run/containerd/containerd.sock
+
 kubeadm config images pull
-sudo kubeadm init --apiserver-advertise-address 192.168.56.10 --kubernetes-version 1.22.6
+sudo kubeadm init --apiserver-advertise-address 192.168.56.10 --kubernetes-version 1.24.3
 # Reset configuration
 # sudo kubeadm reset
 # sudo rm -rf /etc/cni/net.d
@@ -139,14 +146,21 @@ kubectl get nodes
 kubeadm token create --print-join-command
 #
 # Example of command to run in worker node:
-# sudo kubeadm join 192.168.56.10:6443 --token x3eo52.2d7gsi6kait5q3tr --discovery-token-ca-cert-hash sha256:24af0d70399747b37b2684886fc8fe3f8585ecfbfae83872249872d5ea36261f
+# sudo kubeadm join 192.168.56.10:6443 --token 2o2t5a.t28j1hh4w21vti05 --discovery-token-ca-cert-hash sha256:cd84d6f4b8e975c7fcffa5bce7bdc2f19803647bc507bb0b06cc600d9fa72738
+
+# Fix bug between containerd and kubeadm in worker1 and worker2
+# source: https://github.com/containerd/containerd/issues/4581
+sudo rm /etc/containerd/config.toml
+sudo systemctl restart containerd
+sudo setfacl -m user:$USER:rw /var/run/containerd/containerd.sock
 
 # Fix problem in worker1 and worker2 with wave
 # References:
 # http://www.bennythejudge.com/kubernetes/cni/weaver/2020/05/02/weave-pod-crashes-on-worker-digitalocean.html
 # https://stackoverflow.com/questions/54550285/readiness-probe-failed-error-in-weave-kubernetes
+sudo modprobe br_netfilter ip_vs ip_vs_rr ip_vs_wrr ip_vs_sh nf_conntrack_ipv4
 kubectl get svc kube-dns -n kube-system
-# Change 10.96.0.1/32 to the network address in the output of the previous command
+# Change 10.96.0.10/32 to the network address in the output of the previous command
 sudo iptables -t nat -I KUBE-SERVICES -d 10.96.0.1/32 -p tcp -m comment --comment "default/kubernetes:https cluster IP" -m tcp --dport 443 -j KUBE-MARK-MASQ
 
 

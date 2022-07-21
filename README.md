@@ -67,6 +67,9 @@ Create cluster with informations in this [page](create-cluster.md).
 * https://medium.com/@kritika.singhal/managing-kubernetes-context-using-kubectl-fe78a9cdc506?s=08
 * https://fransemalila.medium.com/kubernetes-networking-cea2e1b7d2b3?s=08
 * https://medium.com/k8slens/kubernetes-for-everyone-785959e2c6d7
+* https://github.com/k8s-at-home/awesome-home-kubernetes
+* https://github.com/ahmetb/kubectl-aliases
+* https://aws.plainenglish.io/kubernetes-deep-dive-cri-container-runtime-interface-f1d005d5a458
 
 # Exercises and tips about CKA
 
@@ -102,6 +105,13 @@ Create cluster with informations in this [page](create-cluster.md).
 * https://aninditabasak.medium.com/certified-kubernetes-administrator-exam-cka-exam-preparation-cheatsheet-261d309a8013
 * https://medium.com/@reachcloudsme/cracking-ckad-cka-cks-exams-my-way-4081f527e0a3
 * https://faun.pub/how-i-cracked-certified-kubernetes-administrator-exam-in-7-days-f77f6f0ba4c5
+* https://github.com/kodekloudhub/certified-kubernetes-administrator-course
+* https://www.linkedin.com/pulse/my-certified-kubernetes-associate-cka-journey-all-you-ali-murtaza/
+* https://medium.com/@italocavalcantechagas/certifica%C3%A7%C3%A3o-kubernetes-cka-como-passei-na-certifica%C3%A7%C3%A3o-come%C3%A7ando-do-zero-ecf3cce5f5ce
+* https://itnext.io/cks-cka-ckad-changed-terminal-to-remote-desktop-157a26c1d5e
+* https://itnext.io/practical-tips-for-passing-ckad-exam-6cbdf2d35cb1
+* https://www.slideshare.net/AdnanRashid2/cka-certified-kubernetes-administrator-notes
+
 
 # Tools
 
@@ -123,6 +133,16 @@ Create cluster with informations in this [page](create-cluster.md).
 * https://infra.app/
 * https://k9scli.io/
 * https://github.com/up9inc/mizu
+* https://keptn.sh/ 
+* https://medium.com/adessoturkey/backup-restore-kubernetes-resources-with-velero-b7fee14e7664
+* http://dockerlabs.collabnix.com/kubernetes/kubetools/
+* https://argoproj.github.io
+* https://fluxcd.io
+* https://blog.cloudsecque.com/
+* https://github.com/ReallyLiri/kubescout
+* https://github.com/armosec/kubescape
+* https://neuvector.com
+* https://k8syaml.com
 
 # License
 

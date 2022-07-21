@@ -36,8 +36,8 @@ VAGRANTFILE_API_VERSION = "2"
 TIMEOUT = 600
 
 # Box name: https://app.vagrantup.com/boxes/search
-BOXNAME     = "generic/ubuntu1804"
-BOX_VERSION = "3.6.8"
+BOXNAME     = "generic/ubuntu2004"
+BOX_VERSION = "4.1.0"
 
 # Network address of VMs
 NET_ADDRESS = "192.168.56"

@@ -36,8 +36,8 @@ VAGRANTFILE_API_VERSION = "2"
 TIMEOUT = 600
 
 # Box name: https://app.vagrantup.com/boxes/search
-BOXNAME     = "ubuntu/bionic64"
-BOX_VERSION = "20220117.0.0"
+BOXNAME     = "ubuntu/focal64"
+BOX_VERSION = "20220715.0.0"
 
 # Network address of VMs
 NET_ADDRESS = "192.168.56"
