@@ -25,7 +25,7 @@ sudo apt upgrade -y
 Install the follow packages.
 
 ```bash
-sudo apt install -y apt-transport-https acl ca-certificates vim traceroute telnet tcpdump elinks curl wget openssl netcat net-tools jq
+sudo apt install -y apt-transport-https acl ca-certificates vim traceroute telnet tcpdump elinks curl wget openssl netcat net-tools jq etcd-client
 ```
 
 # Docker
@@ -134,6 +134,11 @@ alias ll='ls -alF'
 alias ls='ls --color=auto'
 export do="--dry-run=client -o yaml"
 export now="--force --grace-period 0"
+alias kusectx="kubectl config use-context $1"
+alias klistctx="kubectl config get-contexts"
+alias kusens="kubectl config set-context --current --namespace=$1"
+alias klistns="kubectl get ns"
+alias knewns="kubectl create ns $1"
 ```
 
 * Apply new aliases

@@ -184,6 +184,9 @@ EOF
 # Fix problem with nodes after reboot VMs
 # Permanently configure kubelet in each VM
 # Reference: https://stackoverflow.com/questions/51154911/kubectl-exec-results-in-error-unable-to-upgrade-connection-pod-does-not-exi
+
+sudo iptables -t nat -I KUBE-SERVICES -d 10.96.0.1/32 -p tcp -m comment --comment "default/kubernetes:https cluster IP" -m tcp --dport 443 -j KUBE-MARK-MASQ
+
 # Only master
 cat << EOF | sudo tee /etc/default/kubelet
 KUBELET_EXTRA_ARGS="--node-ip=192.168.56.10"

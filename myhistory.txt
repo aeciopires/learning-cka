@@ -1,0 +1,143 @@
+kubectl get pods -A -o wide
+k -n project-hamster create sa processor
+k create ns processor
+k delete ns processor
+k create ns project-hamster
+k -n project-hamster create sa processor
+k -n project-hamster create role processor --verb=create --resource=secret --resource=configmap
+k get role processor -n project-hamster
+k get role processor -n project-hamster -o yaml
+k -n project-hamster create rolebinding processor --role processor --serviceaccount project-hamster:processor
+k get rolebinding processor -n project-hamster -o yaml
+k auth can-i -h
+k -n project-hamster auth can-i create secret --as system:serviceaccount:project-hamster:processor
+k -n project-hamster auth can-i create configmap --as system:serviceaccount:project-hamster:processor
+k -n project-hamster auth can-i create pod --as system:serviceaccount:project-hamster:processor
+k -n project-hamster auth can-i delete secret --as system:serviceaccount:project-hamster:processor
+k -n project-hamster auth can-i get configmap --as system:serviceaccount:project-hamster:processor
+k create ns project-tiger
+k -n project-tiger create deployment --image=httpd:2.4-alpine ds-important $do > 11.yaml
+k apply -f 11.yaml  --dry-run=client
+k apply -f 11.yaml  
+k get ds -n project-tiger
+k get pods -n project-tiger
+k get pods -n project-tiger -o wide
+cp 11.yaml 12.yaml
+vim 12.yaml 
+k apply -f 12.yaml  --dry-run=client
+k apply -f 12.yaml  
+k get pods -n project-tiger -o wide
+k get deploy -n project-tiger
+k describe pod deploy-important-78fd99d786-skwzl -n project-tiger
+k get ns
+k delete ns project-tiger $now
+k delete ns project-hamster $now
+k get ns
+kubectl run multi-container-playground --image=nginx:1.17.6-alpine $do > 13.yaml
+vim 13.yaml 
+k apply -f 13.yaml $do
+k apply -f 13.yaml
+k get pods
+k describe pod multi-container-playground
+k get pods
+vim 13.yaml 
+k apply -f 13.yaml --force
+k describe pod multi-container-playground
+k get pods
+k exec multi-container-playground -c c1 -- env | grep MY
+k logs multi-container-playground -c c3
+k delete -f 13.yaml --force $now
+k get pods
+k get nodes
+sudo mkdir -p /opt/course/14/
+vim /opt/course/14/cluster-info
+sudo vim /opt/course/14/cluster-info
+k get nodes -o wide
+k get services -o wide
+sudo vim /opt/course/14/cluster-info
+sudo cat /etc/kubernetes/manifests/kube-apiserver.yaml | grep range
+sudo find /etc/cni/net.d/
+sudo cat /etc/cni/net.d/10-weave.conflist
+sudo vim /opt/course/14/cluster-info
+sudo mkdir -p /opt/course/15/
+echo kubectl get events -A --sort-by=.metadata.creationTimestamp | sudo tee /opt/course/15/cluster_events.sh
+sudo cat /opt/course/15/cluster_events.sh
+k -n kube-system get pod -o wide | grep proxy
+kubectl delete pod kube-proxy-kxzbh -n kube-system $now
+k -n kube-system get pod -o wide | grep proxy
+sudo chmod +x /opt/course/15/cluster_events.sh
+sudo cat /opt/course/15/cluster_events.sh
+kubectl get events -A --sort-by=.metadata.creationTimestamp
+sh /opt/course/15/cluster_events.sh
+sudo vim /opt/course/15/pod_kill.log
+sh /opt/course/15/cluster_events.sh
+sudo mkdir -p /opt/course/16
+k api-resources
+k api-resources -h
+k api-resources --namespaced=true
+k api-resources --namespaced=true -o name
+k api-resources --namespaced=true
+sudo k api-resources --namespaced -o name > /opt/course/16/resources.txt
+k api-resources --namespaced -o name | sudo tee /opt/course/16/resources.txt
+sudo cat /opt/course/16/resources.txt
+k api-resources -h
+k get role --no-headers | wc -l
+k get role --no-headers -n kube-system | wc -l
+k get role --no-headers -n default | wc -l
+sudo vim /opt/course/16/crowded-namespace.txt
+k get role --no-headers -A | wc -l
+k get role --no-headers -A
+kubectl create ns project-tiger
+k run tigers-reunite --image=httpd:2.4.41-alpine -n project-tiger $do > 17.yaml
+vim 17.yaml 
+k apply -f 17.yaml 
+k get pods -n project-tiger
+k get pods -n project-tiger -o wide
+sudo mkdir /opt/course/17
+sudo vim /opt/course/17/pod-container.txt
+sudo chmod -R +x /opt/course/*/*.sh
+kubectl run secret-pod --image=busybox:1.31.1 -n secret $do > 19.yaml
+vim 19.yaml 
+k -n secret create secret generic secret2 --from-literal=user=user1 --from-literal=pass=1234
+kubeadm version
+kubectl version
+kubelet --version
+sudo cp 19.yaml /etc/kubernetes/manifests/
+k get pods -A
+sudo rm /etc/kubernetes/manifests/19.yaml
+k get pods -A
+sudo ls /etc/kubernetes/pki/
+sudo find /etc/kubernetes/pki/ | grep apiserver
+sudo openssl x509 -noout -text -in /etc/kubernetes/pki/apiserver.crt | grep Validity -A2
+sudo kubeadm certs check-expiration | grep apiserver
+sudo openssl x509 -noout -text -in /var/lib/kubelet/pki/kubelet-client-current.pem | grep Issuer
+sudo openssl x509 -noout -text -in /var/lib/kubelet/pki/kubelet-client-current.pem | grep "Extended Key Usage" -A1
+sudo openssl x509 -noout -text -in /var/lib/kubelet/pki/kubelet.crt | grep Issuer
+sudo openssl x509 -noout -text -in /var/lib/kubelet/pki/kubelet.crt | grep "Extended Key Usage" -A1
+sudo cat /etc/kubernetes/manifests/kube-apiserver.yaml | grep etcd
+
+sudo ETCDCTL_API=3 etcdctl snapshot save /tmp/etcd-backup.db --cacert /etc/kubernetes/pki/etcd/ca.crt --cert /etc/kubernetes/pki/apiserver-etcd-client.crt --key /etc/kubernetes/pki/apiserver-etcd-client.key
+sudo cat /tmp/etcd-backup.db 
+sudo ETCDCTL_API=3 etcdctl snapshot restore /tmp/etcd-backup.db --data-dir /var/lib/etcd-backup --cacert /etc/kubernetes/pki/etcd/ca.crt --cert /etc/kubernetes/pki/apiserver-etcd-client.crt --key /etc/kubernetes/pki/apiserver-etcd-client.key
+
+sudo ETCDCTL_API=3 etcdctl snapshot save /tmp/etcd-backup.db --cacert /etc/kubernetes/pki/etcd/ca.crt --cert /etc/kubernetes/pki/etcd/server.crt --key /etc/kubernetes/pki/etcd/server.key
+sudo cat /tmp/etcd-backup.db 
+sudo ETCDCTL_API=3 etcdctl snapshot restore /tmp/etcd-backup.db --data-dir /var/lib/etcd-backup --cacert /etc/kubernetes/pki/etcd/ca.crt --cacert /etc/kubernetes/pki/etcd/ca.crt --cert /etc/kubernetes/pki/etcd/server.crt --key /etc/kubernetes/pki/etcd/server.key
+
+sudo tree /var/lib/etcd-backup
+k run test --image=nginx 
+k get pods -A | grep test
+cd /etc/kubernetes/manifests/
+sudo mkdir ../test
+sudo mv *.yaml ../test/
+k get pods
+sudo vim ../test/etcd.yaml 
+sudo mv ../test/*.yaml .
+k get pods -A | grep test
+sudo vim etcd.yaml 
+sudo mv *.yaml ../test
+sudo mv ../test/*.yaml .
+k get pods -A | grep test
+k delete pod test $now
+k get pods -A -o jsonpath="{range .items[*]} {.metadata.name}{.spec.containers[*].resources}{'\n'}"
+k get pods -A -o jsonpath="{range .items[*]}{.metadata.name} {.status.qosClass}{'\n'}"
