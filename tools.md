@@ -25,7 +25,7 @@ sudo apt upgrade -y
 Install the follow packages.
 
 ```bash
-sudo apt install -y apt-transport-https acl ca-certificates vim traceroute telnet tcpdump elinks curl wget openssl netcat net-tools jq etcd-client
+sudo apt install -y apt-transport-https acl ca-certificates vim traceroute telnet tcpdump elinks curl wget openssl netcat net-tools jq etcd-client cri-tools
 ```
 
 # Docker

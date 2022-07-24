@@ -29,7 +29,6 @@ Create cluster with informations in this [page](create-cluster.md).
 * https://kubebyexample.com/
 * https://medium.com/@mfsilv/kubernetes-a-gentle-introduction-9d23de7f00e0
 * https://itnext.io/kubernetes-for-dummies-life-of-a-pod-fc8158e27aa
-* https://itnext.io/kubernetes-for-dummies-life-of-a-pod-fc8158e27aa
 * https://medium.com/scorelab/statefulset-in-k8s-24a0b3a30ec9
 * https://kubernetes.io/docs/
 * https://kodekloud.com/courses/game-of-pods/
@@ -71,13 +70,12 @@ Create cluster with informations in this [page](create-cluster.md).
 * https://github.com/ahmetb/kubectl-aliases
 * https://aws.plainenglish.io/kubernetes-deep-dive-cri-container-runtime-interface-f1d005d5a458
 * https://kubernetes.io/docs/reference/kubectl/cheatsheet/
+* https://dev.to/peterj/kubernetes-cli-kubectl-tips-you-didnt-know-about-3fde
 
 # Exercises and tips about CKA
 
-* https://docs.linuxfoundation.org/tc-docs/certification/lf-candidate-handbook/exam-preparation-checklist
 * https://faun.pub/be-fast-with-kubectl-1-18-ckad-cka-31be00acc443
 * https://training.linuxfoundation.org/certification/certified-kubernetes-administrator-cka/
-* https://docs.linuxfoundation.org/tc-docs/certification/lf-candidate-handbook
 * https://docs.linuxfoundation.org/tc-docs/certification/tips-cka-and-ckad
 * https://docs.linuxfoundation.org/tc-docs/certification/faq-cka-ckad-cks
 * https://www.youtube.com/watch?v=9UqkWcdy140
@@ -117,7 +115,15 @@ Create cluster with informations in this [page](create-cluster.md).
 * https://killercoda.com/killer-shell-cka
 * https://killercoda.com/killer-shell-ckad
 * https://github.com/dgkanatsios/CKAD-exercises/blob/main/a.core_concepts.md
-
+* https://github.com/walidshaari/Kubernetes-Certified-Administrator
+* https://kubewiz.com/
+* https://k8simulator.com/
+* https://www.fast2test.com/CKA-practice-test.html#
+* https://youtu.be/xySXLeVjtI0
+* https://www.lisenet.com/2022/cka-practice-questions/
+* https://www.freecodecamp.org/news/certified-kubernetes-administrator-study-guide-cka/
+* https://dev.to/subodev/50-questions-for-ckad-and-cka-exam-3bjm
+* 
 
 # Tools
 
@@ -139,7 +145,7 @@ Create cluster with informations in this [page](create-cluster.md).
 * https://infra.app/
 * https://k9scli.io/
 * https://github.com/up9inc/mizu
-* https://keptn.sh/ 
+* https://keptn.sh/
 * https://medium.com/adessoturkey/backup-restore-kubernetes-resources-with-velero-b7fee14e7664
 * http://dockerlabs.collabnix.com/kubernetes/kubetools/
 * https://argoproj.github.io
