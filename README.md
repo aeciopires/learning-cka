@@ -106,6 +106,8 @@ Create cluster with informations in this [page](create-cluster.md).
 * https://training.linuxfoundation.org/certification/certified-kubernetes-administrator-cka/
 * https://docs.linuxfoundation.org/tc-docs/certification/tips-cka-and-ckad
 * https://docs.linuxfoundation.org/tc-docs/certification/faq-cka-ckad-cks
+* https://www.youtube.com/watch?v=TJSAcwUP0pE
+* https://www.youtube.com/watch?v=FZ3VQC-aRmI
 * https://faun.pub/be-fast-with-kubectl-1-18-ckad-cka-31be00acc443
 * https://ummiyah-nasim.medium.com/certified-kubernetes-administrator-cka-tips-and-preparation-strategy-6c6aceae1f42
 * https://itnext.io/kubernetes-journey-cka-ckad-exam-tips-ff73e4672833
@@ -123,6 +125,7 @@ Create cluster with informations in this [page](create-cluster.md).
 * https://www.slideshare.net/AdnanRashid2/cka-certified-kubernetes-administrator-notes
 * https://kubernetes.io/docs/tasks/debug/debug-cluster/
 * https://kubernetes.io/docs/concepts/scheduling-eviction/kube-scheduler/
+* https://www.techworld-with-nana.com/kubernetes-administrator-cka
 * https://github.com/kelseyhightower/kubernetes-the-hard-way
 * https://github.com/mmumshad/kubernetes-the-hard-way
 
