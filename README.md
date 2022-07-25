@@ -7,6 +7,8 @@
 - [Create Cluster](#create-cluster)
 - [Learning Kubernetes](#learning-kubernetes)
 - [Exercises and tips about CKA](#exercises-and-tips-about-cka)
+  - [Exercises and simulators](#exercises-and-simulators)
+  - [Tips and courses](#tips-and-courses)
 - [Tools](#tools)
 - [License](#license)
 - [Contributors](#contributors)
@@ -25,17 +27,20 @@ Create cluster with informations in this [page](create-cluster.md).
 
 # Learning Kubernetes
 
-* https://learnk8s.io/kubernetes-network-packets
-* https://kubebyexample.com/
-* https://medium.com/@mfsilv/kubernetes-a-gentle-introduction-9d23de7f00e0
-* https://itnext.io/kubernetes-for-dummies-life-of-a-pod-fc8158e27aa
-* https://medium.com/scorelab/statefulset-in-k8s-24a0b3a30ec9
 * https://kubernetes.io/docs/
-* https://kodekloud.com/courses/game-of-pods/
 * https://blog.aeciopires.com/primeiros-passos-com-docker
 * https://github.com/badtuxx/DescomplicandoKubernetes
+* https://kubebyexample.com/
+* https://medium.com/@mfsilv/kubernetes-a-gentle-introduction-9d23de7f00e0
+* https://k8s-examples.container-solutions.com/
+* https://learnk8s.io/troubleshooting-deployments
+* https://learnk8s.io/kubernetes-network-packets
+* https://ronaknathani.com/blog/2020/08/how-a-kubernetes-pod-gets-an-ip-address/
+* https://itnext.io/kubernetes-for-dummies-life-of-a-pod-fc8158e27aa
+* https://kodekloud.com/courses/game-of-pods/
+* https://dev.to/kodekloud/learn-kubernetes-by-playing-the-game-of-pods-43g4
 * https://medium.com/dzerolabs/just-in-time-kubernetes-a-beginners-guide-to-kubernetes-core-concepts-19ee7acbafa1
-* https://github.com/realvz/awesome-eks
+* https://medium.com/scorelab/statefulset-in-k8s-24a0b3a30ec9
 * https://medium.com/devops-mojo/kubernetes-architecture-overview-introduction-to-k8s-architecture-and-understanding-k8s-cluster-components-90e11eb34ccd
 * https://sruthakeerthi-k.medium.com/powerful-k8s-concepts-that-every-k8s-developer-must-know-ac2b37c37254
 * https://ymmt2005.hatenablog.com/entry/k8s-things
@@ -53,9 +58,8 @@ Create cluster with informations in this [page](create-cluster.md).
 * https://kubernetes.io/docs/concepts/services-networking/dns-pod-service/#pod-s-dns-policy
 * https://edgehog.blog/getting-started-with-k8s-core-concepts-135fb570462e
 * https://itnext.io/working-with-kubernetes-configmaps-part-2-watchers-b6dd0e583d71
-* https://github.com/kelseyhightower/kubernetes-the-hard-way
-* https://github.com/mmumshad/kubernetes-the-hard-way
-* https://dev.to/kodekloud/learn-kubernetes-by-playing-the-game-of-pods-43g4
+* https://www.mirantis.com/blog/introduction-to-yaml-creating-a-kubernetes-deployment/
+* https://github.com/realvz/awesome-eks
 * https://www.freecodecamp.org/news/the-kubernetes-handbook/amp/?__twitter_impression=true
 * https://docs.google.com/presentation/d/1zrfVlE5r61ZNQrmXKx5gJmBcXnoa_WerHEnTxu5SMco/
 * https://slides.kubernetesmastery.com/#1
@@ -66,22 +70,17 @@ Create cluster with informations in this [page](create-cluster.md).
 * https://medium.com/@kritika.singhal/managing-kubernetes-context-using-kubectl-fe78a9cdc506?s=08
 * https://fransemalila.medium.com/kubernetes-networking-cea2e1b7d2b3?s=08
 * https://medium.com/k8slens/kubernetes-for-everyone-785959e2c6d7
-* https://github.com/k8s-at-home/awesome-home-kubernetes
-* https://github.com/ahmetb/kubectl-aliases
 * https://aws.plainenglish.io/kubernetes-deep-dive-cri-container-runtime-interface-f1d005d5a458
-* https://kubernetes.io/docs/reference/kubectl/cheatsheet/
-* https://dev.to/peterj/kubernetes-cli-kubectl-tips-you-didnt-know-about-3fde
 
 # Exercises and tips about CKA
 
-* https://faun.pub/be-fast-with-kubectl-1-18-ckad-cka-31be00acc443
-* https://training.linuxfoundation.org/certification/certified-kubernetes-administrator-cka/
-* https://docs.linuxfoundation.org/tc-docs/certification/tips-cka-and-ckad
-* https://docs.linuxfoundation.org/tc-docs/certification/faq-cka-ckad-cks
-* https://www.youtube.com/watch?v=9UqkWcdy140
-* https://www.mirantis.com/blog/introduction-to-yaml-creating-a-kubernetes-deployment/
-* https://learnk8s.io/troubleshooting-deployments
-* https://ronaknathani.com/blog/2020/08/how-a-kubernetes-pod-gets-an-ip-address/
+## Exercises and simulators
+
+* https://killercoda.com/killer-shell-cka
+* https://killercoda.com/killer-shell-ckad
+* https://rob-mengert.medium.com/my-cka-experience-29e350c3f283
+* https://dev.to/liptanbiswas/ckad-practice-questions-4mpn
+* https://github.com/twajr/ckad-prep-notes?utm_sq=gi8psj8vrn
 * https://github.com/badtuxx/BondeDoCKA
 * https://github.com/dgkanatsios/CKAD-exercises
 * https://github.com/roxcarpio/cka-exercises
@@ -89,12 +88,25 @@ Create cluster with informations in this [page](create-cluster.md).
 * https://github.com/franchev/CKA-Exercises
 * https://github.com/kimdoanh89/CKA-exercises
 * https://github.com/alijahnas/CKA-practice-exercises
+* https://github.com/walidshaari/Kubernetes-Certified-Administrator
+* https://github.com/kodekloudhub/certified-kubernetes-administrator-course
 * https://killer.sh/
 * https://kodekloud.com/
-* https://k8s-examples.container-solutions.com/
-* https://rob-mengert.medium.com/my-cka-experience-29e350c3f283
-* https://dev.to/liptanbiswas/ckad-practice-questions-4mpn
-* https://github.com/twajr/ckad-prep-notes?utm_sq=gi8psj8vrn
+* https://kubewiz.com/
+* https://k8simulator.com/
+* https://www.fast2test.com/CKA-practice-test.html#
+* https://youtu.be/xySXLeVjtI0
+* https://www.lisenet.com/2022/cka-practice-questions/
+* https://www.freecodecamp.org/news/certified-kubernetes-administrator-study-guide-cka/
+* https://dev.to/subodev/50-questions-for-ckad-and-cka-exam-3bjm
+
+## Tips and courses
+
+* https://www.youtube.com/watch?v=9UqkWcdy140
+* https://training.linuxfoundation.org/certification/certified-kubernetes-administrator-cka/
+* https://docs.linuxfoundation.org/tc-docs/certification/tips-cka-and-ckad
+* https://docs.linuxfoundation.org/tc-docs/certification/faq-cka-ckad-cks
+* https://faun.pub/be-fast-with-kubectl-1-18-ckad-cka-31be00acc443
 * https://ummiyah-nasim.medium.com/certified-kubernetes-administrator-cka-tips-and-preparation-strategy-6c6aceae1f42
 * https://itnext.io/kubernetes-journey-cka-ckad-exam-tips-ff73e4672833
 * https://medium.com/@pramods2006/the-best-way-to-pass-the-cncf-cka-exam-in-2021-334027b59c43
@@ -104,7 +116,6 @@ Create cluster with informations in this [page](create-cluster.md).
 * https://aninditabasak.medium.com/certified-kubernetes-administrator-exam-cka-exam-preparation-cheatsheet-261d309a8013
 * https://medium.com/@reachcloudsme/cracking-ckad-cka-cks-exams-my-way-4081f527e0a3
 * https://faun.pub/how-i-cracked-certified-kubernetes-administrator-exam-in-7-days-f77f6f0ba4c5
-* https://github.com/kodekloudhub/certified-kubernetes-administrator-course
 * https://www.linkedin.com/pulse/my-certified-kubernetes-associate-cka-journey-all-you-ali-murtaza/
 * https://medium.com/@italocavalcantechagas/certifica%C3%A7%C3%A3o-kubernetes-cka-como-passei-na-certifica%C3%A7%C3%A3o-come%C3%A7ando-do-zero-ecf3cce5f5ce
 * https://itnext.io/cks-cka-ckad-changed-terminal-to-remote-desktop-157a26c1d5e
@@ -112,21 +123,15 @@ Create cluster with informations in this [page](create-cluster.md).
 * https://www.slideshare.net/AdnanRashid2/cka-certified-kubernetes-administrator-notes
 * https://kubernetes.io/docs/tasks/debug/debug-cluster/
 * https://kubernetes.io/docs/concepts/scheduling-eviction/kube-scheduler/
-* https://killercoda.com/killer-shell-cka
-* https://killercoda.com/killer-shell-ckad
-* https://github.com/dgkanatsios/CKAD-exercises/blob/main/a.core_concepts.md
-* https://github.com/walidshaari/Kubernetes-Certified-Administrator
-* https://kubewiz.com/
-* https://k8simulator.com/
-* https://www.fast2test.com/CKA-practice-test.html#
-* https://youtu.be/xySXLeVjtI0
-* https://www.lisenet.com/2022/cka-practice-questions/
-* https://www.freecodecamp.org/news/certified-kubernetes-administrator-study-guide-cka/
-* https://dev.to/subodev/50-questions-for-ckad-and-cka-exam-3bjm
-* 
+* https://github.com/kelseyhightower/kubernetes-the-hard-way
+* https://github.com/mmumshad/kubernetes-the-hard-way
 
 # Tools
 
+* https://kubernetes.io/docs/reference/kubectl/cheatsheet/
+* https://dev.to/peterj/kubernetes-cli-kubectl-tips-you-didnt-know-about-3fde
+* https://github.com/k8s-at-home/awesome-home-kubernetes
+* https://github.com/ahmetb/kubectl-aliases
 * https://github.com/tomhuang12/awesome-k8s-resources
 * https://github.com/ramitsurana/awesome-kubernetes
 * https://sopblog.medium.com/most-useful-kubectl-command-for-kubernetes-administrator-or-developer-490530b4e7dc

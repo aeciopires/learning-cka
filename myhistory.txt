@@ -142,3 +142,4 @@ k delete pod test $now
 k get pods -A -o jsonpath="{range .items[*]} {.metadata.name}{.spec.containers[*].resources}{'\n'}"
 k get pods -A -o jsonpath="{range .items[*]}{.metadata.name} {.status.qosClass}{'\n'}"
 sudo crictl ps | grep scheduler
+k run busybox --image=busybox --command $do -- /bin/sh -c 'echo hello;sleep 3600' > pod.yaml
