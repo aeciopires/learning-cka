@@ -78,20 +78,13 @@ Create cluster with informations in this [page](create-cluster.md).
 
 * https://killercoda.com/killer-shell-cka
 * https://killercoda.com/killer-shell-ckad
-* https://rob-mengert.medium.com/my-cka-experience-29e350c3f283
-* https://dev.to/liptanbiswas/ckad-practice-questions-4mpn
-* https://github.com/twajr/ckad-prep-notes?utm_sq=gi8psj8vrn
 * https://github.com/badtuxx/BondeDoCKA
 * https://github.com/dgkanatsios/CKAD-exercises
 * https://github.com/roxcarpio/cka-exercises
 * https://github.com/stretchcloud/cka-lab-practice
-* https://github.com/franchev/CKA-Exercises
 * https://github.com/kimdoanh89/CKA-exercises
 * https://github.com/alijahnas/CKA-practice-exercises
-* https://github.com/walidshaari/Kubernetes-Certified-Administrator
-* https://github.com/kodekloudhub/certified-kubernetes-administrator-course
 * https://killer.sh/
-* https://kodekloud.com/
 * https://kubewiz.com/
 * https://k8simulator.com/
 * https://www.fast2test.com/CKA-practice-test.html#
@@ -102,6 +95,11 @@ Create cluster with informations in this [page](create-cluster.md).
 
 ## Tips and courses
 
+* https://github.com/kodekloudhub/certified-kubernetes-administrator-course
+* https://kodekloud.com/courses/certified-kubernetes-administrator-cka
+* https://github.com/walidshaari/Kubernetes-Certified-Administrator
+* https://github.com/twajr/ckad-prep-notes?utm_sq=gi8psj8vrn
+* https://rob-mengert.medium.com/my-cka-experience-29e350c3f283
 * https://www.youtube.com/watch?v=9UqkWcdy140
 * https://training.linuxfoundation.org/certification/certified-kubernetes-administrator-cka/
 * https://docs.linuxfoundation.org/tc-docs/certification/tips-cka-and-ckad
@@ -128,6 +126,7 @@ Create cluster with informations in this [page](create-cluster.md).
 * https://www.techworld-with-nana.com/kubernetes-administrator-cka
 * https://github.com/kelseyhightower/kubernetes-the-hard-way
 * https://github.com/mmumshad/kubernetes-the-hard-way
+* https://www.udemy.com/course/certified-kubernetes-administrator-with-practice-tests
 
 # Tools
 
