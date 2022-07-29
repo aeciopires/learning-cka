@@ -121,6 +121,7 @@ Domains & Competencies:
 * https://github.com/badtuxx/BondeDoCKA
 * https://github.com/dgkanatsios/CKAD-exercises
 * https://github.com/alijahnas/CKA-practice-exercises
+* https://github.com/lisenet/kubernetes-homelab/tree/master/cka#bonus-exercise-am-i-ready-for-the-cka-exam
 * https://killer.sh/
 * https://kubewiz.com/
 * https://k8simulator.com/
@@ -148,6 +149,7 @@ OLD versions of CKA:
 * https://docs.linuxfoundation.org/tc-docs/certification/faq-cka-ckad-cks
 * https://www.youtube.com/watch?v=TJSAcwUP0pE
 * https://www.youtube.com/watch?v=FZ3VQC-aRmI
+* https://github.com/subodh-dharma/ckad
 * https://faun.pub/be-fast-with-kubectl-1-18-ckad-cka-31be00acc443
 * https://ummiyah-nasim.medium.com/certified-kubernetes-administrator-cka-tips-and-preparation-strategy-6c6aceae1f42
 * https://itnext.io/kubernetes-journey-cka-ckad-exam-tips-ff73e4672833
