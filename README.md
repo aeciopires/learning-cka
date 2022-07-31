@@ -151,6 +151,8 @@ OLD versions of CKA:
 * https://www.youtube.com/watch?v=FZ3VQC-aRmI
 * https://github.com/subodh-dharma/ckad
 * https://faun.pub/be-fast-with-kubectl-1-18-ckad-cka-31be00acc443
+* https://pilotudesh.medium.com/zero-to-ckad-in-30-days-23bd2c4f808e
+* https://markrosscloud.medium.com/experiences-with-cka-ckad-and-cks-exams-and-the-benefits-of-managed-kubernetes-e-g-aws-eks-fa5a6b8634bd
 * https://ummiyah-nasim.medium.com/certified-kubernetes-administrator-cka-tips-and-preparation-strategy-6c6aceae1f42
 * https://itnext.io/kubernetes-journey-cka-ckad-exam-tips-ff73e4672833
 * https://medium.com/@pramods2006/the-best-way-to-pass-the-cncf-cka-exam-in-2021-334027b59c43
