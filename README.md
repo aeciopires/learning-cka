@@ -30,6 +30,7 @@ Create cluster with informations in this [page](create-cluster.md).
 * https://kubernetes.io/docs/
 * https://blog.aeciopires.com/primeiros-passos-com-docker
 * https://github.com/badtuxx/DescomplicandoKubernetes
+* https://www.freecodecamp.org/news/the-kubernetes-handbook/
 * https://kubebyexample.com/
 * https://medium.com/@mfsilv/kubernetes-a-gentle-introduction-9d23de7f00e0
 * https://k8s-examples.container-solutions.com/
