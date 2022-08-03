@@ -72,6 +72,9 @@ Create cluster with informations in this [page](create-cluster.md).
 * https://fransemalila.medium.com/kubernetes-networking-cea2e1b7d2b3?s=08
 * https://medium.com/k8slens/kubernetes-for-everyone-785959e2c6d7
 * https://aws.plainenglish.io/kubernetes-deep-dive-cri-container-runtime-interface-f1d005d5a458
+* https://dev.to/rahulrai/practical-introduction-to-kubernetes-autoscaling-tools-with-linode-kubernetes-engine-2i7k
+* https://iximiuz.com/en/posts/kubernetes-api-structure-and-terminology/
+* https://towardsdatascience.com/a-beginner-friendly-introduction-to-kubernetes-540b5d63b3d7
 
 # Exercises and tips about CKA
 
@@ -131,6 +134,7 @@ Domains & Competencies:
 * https://www.lisenet.com/2022/cka-practice-questions/
 * https://www.freecodecamp.org/news/certified-kubernetes-administrator-study-guide-cka/
 * https://dev.to/subodev/50-questions-for-ckad-and-cka-exam-3bjm
+* https://github.com/ahmetb/kubernetes-network-policy-recipes
 
 OLD versions of CKA:
 * https://github.com/roxcarpio/cka-exercises
@@ -168,6 +172,7 @@ OLD versions of CKA:
 * https://itnext.io/cks-cka-ckad-changed-terminal-to-remote-desktop-157a26c1d5e
 * https://itnext.io/practical-tips-for-passing-ckad-exam-6cbdf2d35cb1
 * https://www.slideshare.net/AdnanRashid2/cka-certified-kubernetes-administrator-notes
+* https://pt.scribd.com/document/471172955/CKA-pdf
 * https://kubernetes.io/docs/tasks/debug/debug-cluster/
 * https://kubernetes.io/docs/concepts/scheduling-eviction/kube-scheduler/
 * https://www.techworld-with-nana.com/kubernetes-administrator-cka
@@ -183,11 +188,14 @@ OLD versions of CKA:
 * https://github.com/ahmetb/kubectl-aliases
 * https://github.com/tomhuang12/awesome-k8s-resources
 * https://github.com/ramitsurana/awesome-kubernetes
+* https://github.com/ishantanu/awesome-kubectl-plugins
+* https://medium.com/@lawyeh/introducing-neptune-fecb0299cfa1
 * https://sopblog.medium.com/most-useful-kubectl-command-for-kubernetes-administrator-or-developer-490530b4e7dc
 * https://medium.com/geekculture/cheatsheet-for-kubernetes-minikube-kubectl-5500ffd2f0d5
 * https://collabnix.github.io/kubetools/
 * https://redhatspain.com/other-awesome-lists/
 * https://geekflare.com/kubernetes-tools/amp/
+* https://github.com/BeryJu/korb
 * https://morioh.com/p/d2d9a70ed4df
 * https://dockerlabs.collabnix.com/kubernetes/kubetools/
 * https://caylent.com/50-useful-kubernetes-tools-for-2020
