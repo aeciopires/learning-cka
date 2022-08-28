@@ -32,6 +32,12 @@ Create cluster with informations in this [page](create-cluster.md).
 * https://github.com/badtuxx/DescomplicandoKubernetes
 * https://www.freecodecamp.org/news/the-kubernetes-handbook/
 * https://kubebyexample.com/
+* https://github.com/wandersonwhcr/k8s-examples/tree/main/cronjob-scale
+* https://dev.to/rahulrai/practical-introduction-to-kubernetes-autoscaling-tools-with-linode-kubernetes-engine-2i7k
+* https://medium.com/@zhaoyi0113/kubernetes-how-does-service-network-work-in-the-cluster-d235b69ff536
+* https://github.com/ahmetb/kubernetes-network-policy-recipes
+* https://devopslearners.com/kubernetes-ingress-tutorial-for-beginners-26c2f7727bc
+* https://craig-godden-payne.medium.com/how-does-ingress-work-in-kubernetes-f3b121d0351f
 * https://medium.com/@mfsilv/kubernetes-a-gentle-introduction-9d23de7f00e0
 * https://k8s-examples.container-solutions.com/
 * https://learnk8s.io/troubleshooting-deployments
@@ -143,6 +149,7 @@ OLD versions of CKA:
 
 ## Tips and courses
 
+* https://github.com/ismet55555/Certified-Kubernetes-Administrator-Notes
 * https://github.com/kodekloudhub/certified-kubernetes-administrator-course
 * https://kodekloud.com/courses/certified-kubernetes-administrator-cka
 * https://github.com/walidshaari/Kubernetes-Certified-Administrator
