@@ -156,6 +156,7 @@ OLD versions of CKA:
 * https://github.com/twajr/ckad-prep-notes?utm_sq=gi8psj8vrn
 * https://rob-mengert.medium.com/my-cka-experience-29e350c3f283
 * https://www.youtube.com/watch?v=9UqkWcdy140
+* https://www.youtube.com/watch?v=8fFcx9EgWvk
 * https://training.linuxfoundation.org/certification/certified-kubernetes-administrator-cka/
 * https://docs.linuxfoundation.org/tc-docs/certification/tips-cka-and-ckad
 * https://docs.linuxfoundation.org/tc-docs/certification/faq-cka-ckad-cks
