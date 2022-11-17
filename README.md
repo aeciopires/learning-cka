@@ -140,7 +140,7 @@ Domains & Competencies:
 * [Linux Foundation Certified Kubernetes Administrator (CKA) Program Exam - CKA Exam Practice Test](https://www.fast2test.com/CKA-practice-test.html#)
 * [Certified Kubernetes Administrator Study Guide – Prepare for the CKA Exam](https://www.freecodecamp.org/news/certified-kubernetes-administrator-study-guide-cka/)
 * [CKA Practice Questions](https://www.lisenet.com/2022/cka-practice-questions/)
-* [youtube: ](https://youtu.be/xySXLeVjtI0)
+* [youtube: CKA Exam Practice Paper Questions and Answers](https://youtu.be/xySXLeVjtI0)
 
 OLD versions of CKA:
 * [github: Certified Kubernetes Administrator (CKA) Exercises](https://github.com/kimdoanh89/CKA-exercises)
