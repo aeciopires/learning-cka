@@ -1,4 +1,5 @@
 kubectl get pods -A -o wide
+alias k="kubectl"
 k -n project-hamster create sa processor
 k create ns processor
 k delete ns processor

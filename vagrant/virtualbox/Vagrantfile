@@ -6,6 +6,11 @@
 # vagrant plugin install vagrant-disksize
 # vagrant plugin install vagrant-vbguest
 #
+# Or use the following command in 2.4.x version of vagrant (https://github.com/hashicorp/vagrant/issues/13527#issuecomment-2457908194)
+#
+# VAGRANT_DISABLE_STRICT_DEPENDENCY_ENFORCEMENT=1 vagrant plugin install vagrant-disksize
+# VAGRANT_DISABLE_STRICT_DEPENDENCY_ENFORCEMENT=1 vagrant plugin install vagrant-vbguest
+#
 # Start VMs with commands
 # vagrant up --provision
 #
@@ -31,13 +36,18 @@ end
 #------------------------------------------------#
 # Variables
 #------------------------------------------------#
-Vagrant.require_version ">= 2.2.19"
+Vagrant.require_version ">= 2.4.2"
 VAGRANTFILE_API_VERSION = "2"
 TIMEOUT = 600
 
 # Box name: https://app.vagrantup.com/boxes/search
-BOXNAME     = "ubuntu/focal64"
-BOX_VERSION = "20220715.0.0"
+# About bento project
+# https://github.com/chef/bento
+# https://portal.cloud.hashicorp.com/vagrant/discover/bento
+# https://portal.cloud.hashicorp.com/vagrant/discover/bento/ubuntu-24.04
+BOXNAME     = "bento/ubuntu-24.04"
+BOX_VERSION = "202407.23.0"
+
 
 # Network address of VMs
 NET_ADDRESS = "192.168.56"

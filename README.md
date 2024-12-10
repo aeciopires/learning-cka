@@ -6,16 +6,15 @@
 - [Tmux](#tmux)
 - [Create Cluster](#create-cluster)
 - [Learning Kubernetes](#learning-kubernetes)
-- [Exercises and tips about CKA](#exercises-and-tips-about-cka)
-  - [Exercises and simulators](#exercises-and-simulators)
-  - [Tips and courses](#tips-and-courses)
+- [Exercises and simulators](#exercises-and-simulators)
+- [Tips and courses](#tips-and-courses)
 - [Tools](#tools)
 - [License](#license)
 - [Contributors](#contributors)
 
 <!-- TOC -->
 
-Learning content for the Certified Kubernetes Administrator - CKA based in Kubernetes 1.24.x
+Learning content for the Certified Kubernetes Administrator - CKA based in Kubernetes 1.31.x
 
 # Tmux
 
@@ -82,49 +81,7 @@ Create cluster with informations in this [page](create-cluster.md).
 * [Practical Introduction to Kubernetes Autoscaling Tools with Linode Kubernetes Engine](https://dev.to/rahulrai/practical-introduction-to-kubernetes-autoscaling-tools-with-linode-kubernetes-engine-2i7k)
 * [Practical Introduction to Kubernetes Autoscaling Tools with Linode Kubernetes Engine](https://dev.to/rahulrai/practical-introduction-to-kubernetes-autoscaling-tools-with-linode-kubernetes-engine-2i7k)
 
-# Exercises and tips about CKA
-
-Domains & Competencies:
-
-**Storage 10%**
-* Understand storage classes, persistent volumes
-* Understand volume mode, access modes and reclaim policies for volumes
-* Understand persistent volume claims primitive
-* Know how to configure applications with persistent storage
-
-**Troubleshooting 30%**
-* Evaluate cluster and node logging
-* Understand how to monitor applications
-* Manage container stdout & stderr logs
-* Troubleshoot application failure
-* Troubleshoot cluster component failure
-* Troubleshoot networking
-
-**Workloads & Scheduling 15%**
-* Understand deployments and how to perform rolling update and rollbacks
-* Use ConfigMaps and Secrets to configure applications
-* Know how to scale applications
-* Understand the primitives used to create robust, self-healing, application deployments
-* Understand how resource limits can affect Pod scheduling
-* Awareness of manifest management and common templating tools
-
-**Cluster Architecture, Installation & Configuration 25%**
-* Manage role based access control (RBAC)
-* Use Kubeadm to install a basic cluster
-* Manage a highly-available Kubernetes cluster
-* Provision underlying infrastructure to deploy a Kubernetes cluster
-* Perform a version upgrade on a Kubernetes cluster using Kubeadm
-* Implement etcd backup and restore
-
-**Services & Networking 20%**
-* Understand host networking configuration on the cluster nodes
-* Understand connectivity between Pods
-* Understand ClusterIP, NodePort, LoadBalancer service types and endpoints
-* Know how to use Ingress controllers and Ingress resources
-* Know how to configure and use CoreDNS
-* Choose an appropriate container network interface plugin
-
-## Exercises and simulators
+# Exercises and simulators
 
 * [50 Questions for CKAD and CKA exam](https://dev.to/subodev/50-questions-for-ckad-and-cka-exam-3bjm)
 * [github: Kubernetes Network Policy Recipes](https://github.com/ahmetb/kubernetes-network-policy-recipes)
@@ -147,7 +104,7 @@ OLD versions of CKA:
 * [github: CKA Exercises](https://github.com/roxcarpio/cka-exercises)
 * [github: CKA Exercises](https://github.com/stretchcloud/cka-lab-practice)
 
-## Tips and courses
+# Tips and courses
 
 * [Be fast with Kubectl 1.19 CKAD/CKA](https://faun.pub/be-fast-with-kubectl-1-18-ckad-cka-31be00acc443)
 * [faun: How I Cracked Certified Kubernetes Administrator Exam In 7 Days](https://faun.pub/how-i-cracked-certified-kubernetes-administrator-exam-in-7-days-f77f6f0ba4c5)
@@ -229,13 +186,13 @@ OLD versions of CKA:
 * [Supercharge Kubernetes with these Awesome Tools](https://geekflare.com/kubernetes-tools/amp/)
 * [Useful Tools for Better Kubernetes Development](https://blog.usejournal.com/useful-tools-for-better-kubernetes-development-87820c2b9435)
 
-
 # License
 
 GNUv3 - General Public License version 3
 
 # Contributors
 
+* [Aécio Pires](https://www.linkedin.com/in/aeciopires)
 * [Danilo Rocha](https://www.linkedin.com/in/danilo-figueiredo-rocha)
 * [Isaac Mecchi](https://www.linkedin.com/in/isaacmecchi)
 * [Julio Zanette](https://www.linkedin.com/in/juliozanette)
