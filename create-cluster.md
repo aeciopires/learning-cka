@@ -146,7 +146,7 @@ kubectl get nodes
 kubeadm token create --print-join-command
 #
 # Example of command to run in worker node:
-# sudo kubeadm join 192.168.56.10:6443 --token 2o2t5a.t28j1hh4w21vti05 --discovery-token-ca-cert-hash sha256:cd84d6f4b8e975c7fcffa5bce7bdc2f19803647bc507bb0b06cc600d9fa72738
+# sudo kubeadm join 192.168.56.10:6443 --token ebp3co.v5l7cswqaddxwaci --discovery-token-ca-cert-hash sha256:7d4bd2fed6ad802efadbdd44d7016bdf04efa6710d016c98aa52d962c198a3a8
 
 kubectl get svc kube-dns -n kube-system
 # Change 10.96.0.10/32 to the network address in the output of the previous command
