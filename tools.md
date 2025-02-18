@@ -81,7 +81,7 @@ References:
 
 * Install Kubernetes with kubeadm:
 
-> Attention!!! We will use the Kubernetes 1.31, but new version can be found in https://kubernetes.io/releases/download/
+> Attention!!! We will use the Kubernetes 1.32, but new version can be found in https://kubernetes.io/releases/download/
 
 ```bash
 # Enable kernel modules and configure sysctl
@@ -148,16 +148,16 @@ sudo swapoff -a
 # sudo sed -i '/ swap / s/^\(.*\)$/#\1/g' /etc/fstab
 
 # Add GPG and kubeadm repository
-curl -fsSL https://pkgs.k8s.io/core:/stable:/v1.31/deb/Release.key | sudo gpg --dearmor -o /etc/apt/keyrings/kubernetes-apt-keyring.gpg
+curl -fsSL https://pkgs.k8s.io/core:/stable:/v1.32/deb/Release.key | sudo gpg --dearmor -o /etc/apt/keyrings/kubernetes-apt-keyring.gpg
 
-echo 'deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] https://pkgs.k8s.io/core:/stable:/v1.31/deb/ /' | sudo tee /etc/apt/sources.list.d/kubernetes.list
+echo 'deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] https://pkgs.k8s.io/core:/stable:/v1.32/deb/ /' | sudo tee /etc/apt/sources.list.d/kubernetes.list
 
 sudo apt update
 
 # Command to get version of packages
-sudo apt-cache show kubeadm kubectl kubelet | grep 1.31 | more
+sudo apt-cache show kubeadm kubectl kubelet | grep 1.32 | more
 
-sudo apt install -y kubelet=1.31.3-1.1 kubeadm=1.31.3-1.1 kubectl=1.31.3-1.1
+sudo apt install -y kubelet=1.32.2-1.1 kubeadm=1.32.2-1.1 kubectl=1.32.2-1.1
 
 # Enable kubelet in boot
 sudo systemctl enable --now kubelet

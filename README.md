@@ -14,7 +14,7 @@
 
 <!-- TOC -->
 
-Learning content for the Certified Kubernetes Administrator - CKA based in Kubernetes 1.31.x
+Learning content for the Certified Kubernetes Administrator - CKA based in Kubernetes 1.32.x
 
 # Tmux
 
